@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
 import Search from './Search';
 
-const ForOhFor = () => <h1>404</h1>;
+const FourOhFour = () => <h1>404</h1>;
 
 const App = () =>
   <BrowserRouter>
@@ -12,7 +12,7 @@ const App = () =>
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/search" component={Search} />
-        <Route component={ForOhFor} />
+        <Route component={FourOhFour} />
       </Switch>
     </div>
   </BrowserRouter>
