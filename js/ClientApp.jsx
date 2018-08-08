@@ -6,7 +6,7 @@ import Search from './Search';
 
 const FourOhFour = () => <h1>404</h1>;
 
-const App = () =>
+const App = () => (
   <BrowserRouter>
     <div className='app'>
       <Switch>
@@ -16,4 +16,6 @@ const App = () =>
       </Switch>
     </div>
   </BrowserRouter>
+);
+  
 render(<App />, document.getElementById('app'))
