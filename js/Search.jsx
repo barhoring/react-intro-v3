@@ -4,18 +4,13 @@ import ShowCard from './ShowCard';
 
 class Search extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            searchTerm: 'this is a debugging statment'
-        }    
-        this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
-    }
+    state = {
+        searchTerm: ''
+    };
 
-
-    handleSearchTermChange (event) {
+    handleSearchTermChange = (event) => {
         this.setState({searchTerm:  event.target.value});
-    }
+    };
 
     render() {  
         return (
