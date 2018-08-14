@@ -1,9 +1,10 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import Search from '../Search'
 
+// console.log(process.env.NODE_ENV); // who knew? jest sets a NODE_ENV variable
+
 test('Search renders correctly', () => {
-    const component = renderer.create(<Search />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    const component = shallow(<Search />);
+    expect(component).toMatchSnapshot();
 });
