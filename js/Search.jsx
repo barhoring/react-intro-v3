@@ -20,6 +20,9 @@ class Search extends Component {
                 <input onChange={this.handleSearchTermChange} value={this.state.searchTerm} type="text" placeholder="Search" />
                 </header>
                 <div>
+                    {/*
+                        // it's a good idea to cache all the words `${show.title} ${show.description}` as toLowerCased.  
+                    */}
                 { preload.shows.filter(show=> `${show.title} ${show.description}`.toLowerCase().includes(this.state.searchTerm))
                 .map( show => (
                     <ShowCard key={show.imdbID} {...show} />
