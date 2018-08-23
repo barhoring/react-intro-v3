@@ -7,6 +7,6 @@ const Landing = () => (
         <input type='text' placeholder='Search' />
         <Link to='/search' >Or browse all</Link>
     </div>
-)
+);
 
 export default Landing;
