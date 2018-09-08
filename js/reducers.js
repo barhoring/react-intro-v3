@@ -13,7 +13,6 @@ const rootReducer = (state = DEFAULT_STATE, action) => {
         default:
             return state;
     }
-
 };
 
 export default rootReducer;
