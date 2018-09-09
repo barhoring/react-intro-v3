@@ -3,11 +3,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import setSearchTerm from './actionsCreators';
+import setSearchTerm from './actionCreators';
 
 const Landing = (props: { searchTerm: string, handleSearchTermChange: Function }) => (
   <div className="landing">
-    <h1>svideo</h1>
+    <h1>{props.searchTerm}</h1>
     <input onChange={props.handleSearchTermChange} value={props.searchTerm} type="text" placeholder="Search" />
     <Link to="/search">or Browse All</Link>
   </div>
@@ -16,7 +16,9 @@ const Landing = (props: { searchTerm: string, handleSearchTermChange: Function }
 const mapStateToProps = state => ({ searchTerm: state.searchTerm });
 const mapDispatchToProps = (dispatch: Function) => ({
   handleSearchTermChange(event) {
+    console.log("bar horing 2");
     dispatch(setSearchTerm(event.target.value));
+    console.log("bar horing 3");
   }
 });
 
