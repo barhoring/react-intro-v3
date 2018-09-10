@@ -11,10 +11,7 @@ const Search = (props: {
 }) => {
     return (
       <div className="search">
-        <header>
-          <h1>svideo</h1>
-          <Header showSearch />
-        </header>
+        <Header showSearch />
         <div>
           {props.shows
             .filter(
