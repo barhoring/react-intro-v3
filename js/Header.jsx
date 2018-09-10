@@ -3,7 +3,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import setSearchTerm from './actionCreators';
+import { setSearchTerm } from './actionCreators';
 
 const Header = (props: { showSearch?: boolean, handleSearchTermChange: Function, searchTerm: string }) => {
   let utilSpace;
@@ -29,7 +29,7 @@ const Header = (props: { showSearch?: boolean, handleSearchTermChange: Function,
   return (
     <header>
       <h1>
-          <Link to="/" > 
+          <Link to="/" onClick={() => props.handleSearchTermChange('')} > 
               svideo
           </Link>    
       </h1>

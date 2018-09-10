@@ -25,9 +25,7 @@ class ShowCard extends Component {
   shouldComponentUpdate() {
     return false;
   }
-  props: {
-    show: Show
-  };
+  props: Show;
   render() {
     return (
       <Wrapper to={`/details/${this.props.imdbID}`}>

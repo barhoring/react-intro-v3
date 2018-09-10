@@ -1,8 +1,7 @@
 // @flow
 
-import{ SET_SEARCH_TERM } from './actions';
+import { SET_SEARCH_TERM } from './actions';
 
-export default function setSearchTerm(searchTerm) {
-    console.log("bar horing");
+export function setSearchTerm(searchTerm: string) {
     return { type: SET_SEARCH_TERM, payload: searchTerm };
 };
