@@ -32,9 +32,7 @@ class Landing extends Component {
 const mapStateToProps = state => ({ searchTerm: state.searchTerm });
 const mapDispatchToProps = (dispatch: Function) => ({
   handleSearchTermChange(event) {
-    console.log("bar horing 2");
     dispatch(setSearchTerm(event.target.value));
-    console.log("bar horing 3");
   }
 });
 
