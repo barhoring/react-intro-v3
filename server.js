@@ -1,3 +1,4 @@
+/* eslint no-console:0 */
 require('babel-register');
 
 const express = require('express');
@@ -15,22 +16,21 @@ const template = _.template(baseTemplate);
 
 const server = express();
 
-// staticlly serve everything that is in the public dir, like: css, images bundle.js etc.
 server.use('/public', express.static('./public'));
 
 server.use((req, res) => {
-    // console.log(req);
-    const context = {};
-    const body = ReactDOMServer.renderToString(
-        React.createElement(StaticRouter, { location: req.url, context} , React.createElement(App))
-    );
+  console.log(req.url);
+  const context = {};
+  const body = ReactDOMServer.renderToString(
+    React.createElement(StaticRouter, { location: req.url, context }, React.createElement(App))
+  );
 
-    if(context.url){
-        res.redirect(context.url);
-    }
+  if (context.url) {
+    res.redirect(context.url);
+  }
 
-    res.write(template({ body }));
-    res.end();
+  res.write(template({ body }));
+  res.end();
 });
 
 console.log(`listening on ${port}`);
