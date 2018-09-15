@@ -19,19 +19,17 @@ const server = express();
 server.use('/public', express.static('./public'));
 
 server.use((req, res) => {
-    console.log(req);
-    let context = {};
+    // console.log(req);
+    const context = {};
     const body = ReactDOMServer.renderToString(
-        React.createElement(StaticRouter, { location: req.url, context},
-            React.createElement(App)
-        );
+        React.createElement(StaticRouter, { location: req.url, context} , React.createElement(App))
     );
 
     if(context.url){
         res.redirect(context.url);
     }
 
-    res.write(template, { body });
+    res.write(template({ body }));
     res.end();
 });
 
