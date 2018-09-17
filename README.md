@@ -1,10 +1,9 @@
 # running on production
 
-To enable server-side rendering for fast precievd load time:
-In webpack.config, inside module.exports, replace entry with:
-entry: ['webpack-hot-middleware/client?path=__webpack_hmr&timeout=2000', './js/ClientApp.jsx'],
-
-In production add: $Env:NODE_ENV = "server", before npm run start.
+To enable server-side rendering for fast precievd load time
+fo to commit `fixing hot module reload`
+and add $Env:NODE_ENV = "server" &
+npm run start.
 
 # A Complete Intro to React
 
