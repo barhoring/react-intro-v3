@@ -1,11 +1,16 @@
+# view this site online
+
+[here][now-link]
+deployed with Δ Now
+
 # running on production
 
 To enable server-side rendering for fast precievd load time
 go to commit `fixing hot module reload`
-and add $Env:NODE_ENV = "production" &
+and add NODE_ENV = production &
 npm run start.
 
-for development add $Env:NODE_ENV = "development" &
+for development add NODE_ENV = development &
 npm run start
 
 # A Complete Intro to React
@@ -21,3 +26,4 @@ Please contribute, file issues, and make PRs. More than anything I'm sure there 
 MIT
 
 [gh-page]: http://btholt.github.io/complete-intro-to-react/
+[now-link]: https://react-intro-v3-krnpndpeys.now.sh/
