@@ -1,9 +1,12 @@
 # running on production
 
 To enable server-side rendering for fast precievd load time
-fo to commit `fixing hot module reload`
-and add $Env:NODE_ENV = "server" &
+go to commit `fixing hot module reload`
+and add $Env:NODE_ENV = "production" &
 npm run start.
+
+for development add $Env:NODE_ENV = "development" &
+npm run start
 
 # A Complete Intro to React
 
